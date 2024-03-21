@@ -1,4 +1,5 @@
 pandas
+openpyxl
 tabulate
 sqlalchemy
 langchain_community
