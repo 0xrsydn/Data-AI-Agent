@@ -27,6 +27,7 @@ There is plenty things what agent do:
 ## Demo 
 
 AI Agent demo (Pandas Agent) is available on my [HuggingFace](https://huggingface.co/spaces/0xrsydn/pandas_agent).
+![Hugging Face](img/hf-logo.svg)
 
 ## Contributing
 
