@@ -31,7 +31,15 @@ def sql_agent(file, agent_input):
     return agent_output
 
 def pandas_agent(file, agent_input):
-    df = pd.read_csv(file)
+    # Check if the file extension is CSV
+    if file.name.endswith('.csv'):
+        df = pd.read_csv(file)
+    # Check if the file extension is XLSX or XLS
+    elif file.name.endswith('.xlsx') or file.name.endswith('.xls'):
+        df = pd.read_excel(file)
+    else:
+        return "Unsupported file format. Only CSV, XLS, or XLSX files are supported."
+    # Proceed with your agent code
     agent = create_pandas_dataframe_agent(llm, df, agent_type="openai-tools", verbose=True)
     agent_output = agent.invoke(agent_input)
     return agent_output
