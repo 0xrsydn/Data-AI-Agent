@@ -1,6 +1,7 @@
 import streamlit as st
-from ai_agent import sql_agent
-from ai_agent import pandas_agent
+from ai_agent import AIAgent
+
+agent = AIAgent()
 
 # Create a title and description
 st.title("Pandas AI Agent App 🤖")
@@ -19,7 +20,7 @@ if st.button('Execute'):
         # Create a loading spinner
         with st.spinner('Running the agent...'):
             # Call the pandas_agent function
-            output = pandas_agent(file, agent_input)
+            output = agent.pandas_agent(file, agent_input)
 
         # Display the output
         st.write(output)
