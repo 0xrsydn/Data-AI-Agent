@@ -1,4 +1,4 @@
-# Data AI Agent App 🤖
+# Data Decoder AI Agent 🤖
 
 This is an AI agent app that answers questions about your input data such as answering questions of inputted CSV file using the pandas library based agent.
 There is plenty things what agent do:
